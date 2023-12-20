@@ -1,6 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Src.Api.Domain.Models.ClienteModels;
+using Src.Api.Domain.Models.FornecedorModels;
 
 namespace Src.Api.Domain.Models.NotaFiscalModels
 {
@@ -18,6 +19,8 @@ namespace Src.Api.Domain.Models.NotaFiscalModels
 
         public required string Cpf { get; set; }
         public ClienteModel Cliente { get; set; } = null!;
+
+        public ICollection<FornecedorModel> Fornecedores { get; } = new List<FornecedorModel>();
 
     }
 }
