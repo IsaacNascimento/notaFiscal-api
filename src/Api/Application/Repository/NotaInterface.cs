@@ -6,7 +6,7 @@ namespace Src.Api.Application.Repository.NotaFiscalInterface
 {
     public interface INotaFiscalInterface
     {
-        public List<NotaFiscalModel> NotasFiscais();
+        public List<NotaFiscalModel> GetNotasFiscais();
         public string EmitirNota(EmitirNotaFiscalDto emitirNotaFiscalDto);
     }
 }

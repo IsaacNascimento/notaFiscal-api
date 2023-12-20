@@ -6,7 +6,7 @@ namespace Src.Api.Application.Repository.CarrinhoInterface
 {
     public interface ICarrinhoInterface
     {
-        public List<CarrinhoModel> Carrinhos();
+        public List<CarrinhoModel> GetCarrinhos();
         public string CriarCarrinho(CriarCarrinhoDto criarCarrinhoDto);
     }
 }

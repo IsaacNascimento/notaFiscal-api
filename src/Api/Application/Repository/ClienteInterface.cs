@@ -4,6 +4,6 @@ namespace Src.Api.Application.Repository.ClienteInterface
 {
     public interface IClienteInterface
     {
-        public List<ClienteModel> Clientes();
+        public List<ClienteModel> GetClientes();
     }
 }

@@ -4,6 +4,6 @@ namespace Src.Api.Application.Repository.ProdutoInterface
 {
     public interface IProdutoInterface
     {
-        public List<ProdutoModel> Produtos();
+        public List<ProdutoModel> GetProdutos();
     }
 }
