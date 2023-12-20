@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Src.Api.Domain.Models.ClienteModels;
 
 namespace Src.Api.Domain.Models.NotaFiscalModels
 {
@@ -15,6 +16,8 @@ namespace Src.Api.Domain.Models.NotaFiscalModels
         [StringLength(6)]
         public required string ValorTotal { get; set; }
 
+        public required string Cpf { get; set; }
+        public ClienteModel Cliente { get; set; } = null!;
 
     }
 }

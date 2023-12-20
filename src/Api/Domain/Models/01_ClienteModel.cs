@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Src.Api.Domain.Models.NotaFiscalModels;
 
 namespace Src.Api.Domain.Models.ClienteModels
 {
@@ -16,5 +17,7 @@ namespace Src.Api.Domain.Models.ClienteModels
         [Required]
         [StringLength(30)]
         public required string Nome { get; set; }
+
+        public ICollection<NotaFiscalModel> NotasFiscais { get; } = new List<NotaFiscalModel>();
     }
 }
