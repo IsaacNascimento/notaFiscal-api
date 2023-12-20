@@ -46,6 +46,12 @@ namespace Src.Connection
                 .WithOne(e => e.NotaFiscal)
                 .HasForeignKey(e => e.IdNota)
                 .IsRequired();
+
+            modelBuilder.Entity<ProdutoModel>()
+                .HasMany(e => e.Carrinhos)
+                .WithOne(e => e.Produto)
+                .HasForeignKey(e => e.IdProduto)
+                .IsRequired();
         }
     }
 }

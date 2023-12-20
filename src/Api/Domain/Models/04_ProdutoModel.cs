@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Src.Api.Domain.Models.CarrinhoModels;
 using Src.Api.Domain.Models.FornecedorModels;
 
 namespace Src.Api.Domain.Models.ProdutoModels
@@ -25,5 +26,6 @@ namespace Src.Api.Domain.Models.ProdutoModels
 
         public required string Cnpj { get; set; }
         public FornecedorModel Fornecedor { get; set; } = null!;
+        public ICollection<CarrinhoModel> Carrinhos { get; } = new List<CarrinhoModel>();
     }
 }
