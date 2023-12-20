@@ -1,6 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Src.Api.Domain.Models.NotaFiscalModels;
+using Src.Api.Domain.Models.ProdutoModels;
 
 namespace Src.Api.Domain.Models.FornecedorModels
 {
@@ -19,5 +20,7 @@ namespace Src.Api.Domain.Models.FornecedorModels
 
         public required string IdNota { get; set; }
         public NotaFiscalModel NotaFiscal { get; set; } = null!;
+
+        public ICollection<ProdutoModel> Produtos { get; } = new List<ProdutoModel>();
     }
 }

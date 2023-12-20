@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Src.Api.Domain.Models.FornecedorModels;
 
 namespace Src.Api.Domain.Models.ProdutoModels
 {
@@ -21,5 +22,8 @@ namespace Src.Api.Domain.Models.ProdutoModels
         [Required]
         [StringLength(6)]
         public required string Valor { get; set; }
+
+        public required string Cnpj { get; set; }
+        public FornecedorModel Fornecedor { get; set; } = null!;
     }
 }

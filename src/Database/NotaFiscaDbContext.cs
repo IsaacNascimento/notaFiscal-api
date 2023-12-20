@@ -28,6 +28,12 @@ namespace Src.Connection
                 .WithOne(e => e.NotaFiscal)
                 .HasForeignKey(e => e.IdNota)
                 .IsRequired();
+
+            modelBuilder.Entity<FornecedorModel>()
+                .HasMany(e => e.Produtos)
+                .WithOne(e => e.Fornecedor)
+                .HasForeignKey(e => e.Cnpj)
+                .IsRequired();
         }
     }
 }
