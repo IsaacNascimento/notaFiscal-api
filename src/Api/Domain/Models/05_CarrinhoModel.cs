@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Src.Api.Domain.Models.NotaFiscalModels;
 
 namespace Src.Api.Domain.Models.CarrinhoModels
 {
@@ -13,5 +14,7 @@ namespace Src.Api.Domain.Models.CarrinhoModels
 
         [Required]
         public required int Quantidade { get; set; }
+        public required string IdNota { get; set; }
+        public NotaFiscalModel NotaFiscal { get; set; } = null!;
     }
 }

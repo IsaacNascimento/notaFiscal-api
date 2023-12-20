@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Src.Api.Domain.Models.CarrinhoModels;
 using Src.Api.Domain.Models.ClienteModels;
 using Src.Api.Domain.Models.FornecedorModels;
 
@@ -21,6 +22,8 @@ namespace Src.Api.Domain.Models.NotaFiscalModels
         public ClienteModel Cliente { get; set; } = null!;
 
         public ICollection<FornecedorModel> Fornecedores { get; } = new List<FornecedorModel>();
+
+        public ICollection<CarrinhoModel> Carrinhos { get; } = new List<CarrinhoModel>();
 
     }
 }
