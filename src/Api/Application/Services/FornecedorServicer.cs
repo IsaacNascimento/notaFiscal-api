@@ -1,7 +1,7 @@
 using Src.Api.Application.Repository.FornecedorInterface;
 using Src.Api.Domain.Models.FornecedorModels;
 
-namespace Src.Api.Application.Dto.FornecedorServices
+namespace Src.Api.Application.Services.FornecedorServices
 {
     public class FornecedorService
     {

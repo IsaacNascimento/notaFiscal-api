@@ -1,7 +1,7 @@
 using Src.Api.Application.Repository.ClienteInterface;
 using Src.Api.Domain.Models.ClienteModels;
 
-namespace Src.Api.Application.Dto.ClienteServices
+namespace Src.Api.Application.Services.ClienteServices
 {
     public class ClienteService
     {

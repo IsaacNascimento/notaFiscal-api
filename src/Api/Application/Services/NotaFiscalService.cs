@@ -2,7 +2,7 @@ using Src.Api.Application.Dto.NotaFiscalDto;
 using Src.Api.Application.Repository.NotaFiscalInterface;
 using Src.Api.Domain.Models.NotaFiscalModels;
 
-namespace Src.Api.Application.Dto.NotaFicalServices
+namespace Src.Api.Application.Services.NotaFicalServices
 {
     public class NotaFicalService
     {

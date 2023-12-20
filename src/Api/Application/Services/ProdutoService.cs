@@ -1,7 +1,7 @@
 using Src.Api.Application.Repository.ProdutoInterface;
 using Src.Api.Domain.Models.ProdutoModels;
 
-namespace Src.Api.Application.Dto.ProdutoServices
+namespace Src.Api.Application.Services.ProdutoServices
 {
     public class ProdutoService
     {

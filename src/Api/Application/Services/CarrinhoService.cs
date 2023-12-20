@@ -2,7 +2,7 @@ using Src.Api.Application.Dto.CarrinhoDto;
 using Src.Api.Application.Repository.CarrinhoInterface;
 using Src.Api.Domain.Models.CarrinhoModels;
 
-namespace Src.Api.Application.Dto.CarrinhoServices
+namespace Src.Api.Application.Services.CarrinhoServices
 {
     public class CarrinhoService
     {
