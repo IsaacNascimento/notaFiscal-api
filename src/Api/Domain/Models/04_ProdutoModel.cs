@@ -26,6 +26,6 @@ namespace Src.Api.Domain.Models.ProdutoModels
 
         public required string Cnpj { get; set; }
         public FornecedorModel Fornecedor { get; set; } = null!;
-        public ICollection<CarrinhoModel> Carrinhos { get; } = new List<CarrinhoModel>();
+        public ICollection<CarrinhoModel> Carrinhos { get; set; } = new List<CarrinhoModel>();
     }
 }

@@ -43,7 +43,7 @@ namespace notaFiscal_api.Migrations
 
                     b.HasIndex("IdProduto");
 
-                    b.ToTable("carrinho");
+                    b.ToTable("carrinho", (string)null);
                 });
 
             modelBuilder.Entity("Src.Api.Domain.Models.ClienteModels.ClienteModel", b =>
@@ -59,7 +59,7 @@ namespace notaFiscal_api.Migrations
 
                     b.HasKey("Cpf");
 
-                    b.ToTable("cliente");
+                    b.ToTable("cliente", (string)null);
                 });
 
             modelBuilder.Entity("Src.Api.Domain.Models.FornecedorModels.FornecedorModel", b =>
@@ -81,7 +81,7 @@ namespace notaFiscal_api.Migrations
 
                     b.HasIndex("IdNota");
 
-                    b.ToTable("fornecedor");
+                    b.ToTable("fornecedor", (string)null);
                 });
 
             modelBuilder.Entity("Src.Api.Domain.Models.NotaFiscalModels.NotaFiscalModel", b =>
@@ -102,7 +102,7 @@ namespace notaFiscal_api.Migrations
 
                     b.HasIndex("Cpf");
 
-                    b.ToTable("notaFiscal");
+                    b.ToTable("notaFiscal", (string)null);
                 });
 
             modelBuilder.Entity("Src.Api.Domain.Models.ProdutoModels.ProdutoModel", b =>
@@ -133,7 +133,7 @@ namespace notaFiscal_api.Migrations
 
                     b.HasIndex("Cnpj");
 
-                    b.ToTable("produto");
+                    b.ToTable("produto", (string)null);
                 });
 
             modelBuilder.Entity("Src.Api.Domain.Models.CarrinhoModels.CarrinhoModel", b =>

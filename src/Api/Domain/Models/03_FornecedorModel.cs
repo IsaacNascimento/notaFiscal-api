@@ -21,6 +21,6 @@ namespace Src.Api.Domain.Models.FornecedorModels
         public required string IdNota { get; set; }
         public NotaFiscalModel NotaFiscal { get; set; } = null!;
 
-        public ICollection<ProdutoModel> Produtos { get; } = new List<ProdutoModel>();
+        public ICollection<ProdutoModel> Produtos { get; set; } = new List<ProdutoModel>();
     }
 }

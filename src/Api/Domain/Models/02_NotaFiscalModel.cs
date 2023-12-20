@@ -21,9 +21,9 @@ namespace Src.Api.Domain.Models.NotaFiscalModels
         public required string Cpf { get; set; }
         public ClienteModel Cliente { get; set; } = null!;
 
-        public ICollection<FornecedorModel> Fornecedores { get; } = new List<FornecedorModel>();
+        public ICollection<FornecedorModel> Fornecedores { get; set; } = new List<FornecedorModel>();
 
-        public ICollection<CarrinhoModel> Carrinhos { get; } = new List<CarrinhoModel>();
+        public ICollection<CarrinhoModel> Carrinhos { get; set; } = new List<CarrinhoModel>();
 
     }
 }
