@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Src.Api.Application.Dto.ProdutoDto;
 using Src.Api.Application.Services.ProdutoServices;
 using Src.Api.Domain.Models.ProdutoModels;
 using Src.Api.Infrasctructure.Repository.ProdutoRepositories;
@@ -25,6 +26,24 @@ namespace Src.Api.UI.Controllers.ProdutoControllers
                 List<ProdutoModel> produtos = produtoService.GetProdutos();
 
                 return Ok(new { produtos });
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Ocorreu um Erro ao recuperar os produtos: {ex.Message}");
+            }
+        }
+        [HttpPost]
+        [Route("v1/produtos")]
+        public IActionResult CriarProduto([FromBody] CriarProdutoDto criarProdutoDto)
+        {
+            try
+            {
+                ProdutoRepository produtoRepository = new ProdutoRepository(_context);
+                ProdutoService produtoService = new ProdutoService(produtoRepository);
+                string message = produtoService.CriarProduto(criarProdutoDto);
+
+                return Ok(new { message });
 
             }
             catch (Exception ex)

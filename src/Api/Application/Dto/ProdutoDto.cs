@@ -5,10 +5,10 @@ namespace Src.Api.Application.Dto.ProdutoDto
 {
     public class CriarProdutoDto
     {
-        public string? Nome { get; set; } = null;
-        public string? Descricao { get; set; } = null;
-        public string? Valor { get; set; } = null;
-        public string? Cnpj { get; set; } = null;
-        public List<CriarCarrinhoDto>? Carrinhos { get; set; } = null;
+        public required string IdProduto { get; set; }
+        public required string Nome { get; set; }
+        public required string Descricao { get; set; }
+        public required string Valor { get; set; }
+        public required string Cnpj { get; set; }
     }
 }
