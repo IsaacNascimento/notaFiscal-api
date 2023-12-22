@@ -1,4 +1,3 @@
-using Microsoft.EntityFrameworkCore;
 using Src.Api.Application.Repository.ClienteInterface;
 using Src.Api.Domain.Models.ClienteModels;
 using Src.Connection;
