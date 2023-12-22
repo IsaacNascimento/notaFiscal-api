@@ -1,3 +1,4 @@
+using Src.Api.Application.Dto.ClienteDto;
 using Src.Api.Application.Repository.ClienteInterface;
 using Src.Api.Domain.Models.ClienteModels;
 
@@ -15,6 +16,11 @@ namespace Src.Api.Application.Services.ClienteServices
         {
             List<ClienteModel> clientes = _clienteInterface.GetClientes();
             return clientes;
+        }
+        public string CriarCliente(CriarClienteDto criarClienteDto)
+        {
+            string message = _clienteInterface.CriarCliente(criarClienteDto);
+            return message;
         }
     }
 }

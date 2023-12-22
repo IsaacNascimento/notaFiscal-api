@@ -1,3 +1,4 @@
+using Src.Api.Application.Dto.ClienteDto;
 using Src.Api.Application.Repository.ClienteInterface;
 using Src.Api.Domain.Models.ClienteModels;
 using Src.Connection;
@@ -23,6 +24,26 @@ namespace Src.Api.Infrasctructure.Repository.ClienteRepositories
             catch (Exception ex)
             {
                 throw new Exception($"Ocorreu um Erro ao recuperar os clientes: {ex.Message}");
+            }
+        }
+        public string CriarCliente(CriarClienteDto criarClienteDto)
+        {
+            try
+            {
+                ClienteModel clienteModel = new ClienteModel
+                {
+                    Cpf = criarClienteDto.Cpf,
+                    Nome = criarClienteDto.Nome
+                };
+
+                _context.Cliente.Add(clienteModel);
+                _context.SaveChanges();
+
+                return "Cliente criado com sucesso!";
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Ocorreu um erro ao criar um cliente: {ex.Message}");
             }
         }
     }
