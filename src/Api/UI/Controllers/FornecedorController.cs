@@ -1,9 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using Src.Api.Application.Services.ClienteServices;
 using Src.Api.Application.Services.FornecedorServices;
-using Src.Api.Domain.Models.ClienteModels;
 using Src.Api.Domain.Models.FornecedorModels;
-using Src.Api.Infrasctructure.Repository.ClienteRepositories;
 using Src.Api.Infrasctructure.Repository.FornecedorRepositories;
 using Src.Connection;
 
