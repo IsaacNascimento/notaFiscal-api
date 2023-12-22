@@ -23,8 +23,9 @@ namespace Src.Api.UI.Controllers.ClienteControllers
                 ClienteRepository clienteRepository = new ClienteRepository(_context);
                 ClienteService clienteService = new ClienteService(clienteRepository);
                 List<ClienteModel> clientes = clienteService.GetClientes();
+                // Console.WriteLine("Chegou aqui");
 
-                return StatusCode(200, clientes);
+                return Ok(new { Clientes = clientes });
 
             }
             catch (Exception ex)

@@ -18,6 +18,6 @@ namespace Src.Api.Domain.Models.ClienteModels
         [StringLength(30)]
         public required string Nome { get; set; }
 
-        public ICollection<NotaFiscalModel> NotasFiscais { get; set; } = new List<NotaFiscalModel>();
+        public virtual ICollection<NotaFiscalModel> NotasFiscais { get; set; } = new List<NotaFiscalModel>();
     }
 }

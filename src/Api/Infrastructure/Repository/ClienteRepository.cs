@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using Src.Api.Application.Repository.ClienteInterface;
 using Src.Api.Domain.Models.ClienteModels;
 using Src.Connection;
@@ -22,7 +23,7 @@ namespace Src.Api.Infrasctructure.Repository.ClienteRepositories
             }
             catch (Exception ex)
             {
-                throw new Exception($"Ocorreu um Erro ao salvar o número no Banco: {ex.Message}");
+                throw new Exception($"Ocorreu um Erro ao recuperar os clientes: {ex.Message}");
             }
         }
     }

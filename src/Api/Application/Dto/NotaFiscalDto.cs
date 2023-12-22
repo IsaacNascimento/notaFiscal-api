@@ -5,7 +5,8 @@ namespace Src.Api.Application.Dto.NotaFiscalDto
 {
     public class EmitirNotaFiscalDto
     {
-        public double? ValorTotal { get; set; } = null;
+        public string? IdNota { get; set; } = null;
+        public string? ValorTotal { get; set; } = null;
         public string? ClienteCpf { get; set; } = null;
         public List<CriarCarrinhoDto>? Carrinhos { get; set; } = null;
         public List<CriarFornecedorDto>? Fornecedores { get; set; } = null;
