@@ -16,11 +16,22 @@ namespace Src.Api.Infrasctructure.Repository.NotaFiscalRepositories
             _context = context;
         }
 
-        public string EmitirNota(EmitirNotaFiscalDto EmitirNotaFiscalDto)
+        public string EmitirNota(EmitirNotaFiscalDto emitirNotaFiscalDto)
         {
             try
             {
-                return "Nota criado com sucesso";
+
+                NotaFiscalModel notaFiscalModel = new NotaFiscalModel
+                {
+                    IdNota = emitirNotaFiscalDto.IdNota,
+                    ValorTotal = emitirNotaFiscalDto.ValorTotal,
+                    Cpf = emitirNotaFiscalDto.ClienteCpf,
+                };
+
+                _context.Nota.Add(notaFiscalModel);
+                _context.SaveChanges();
+
+                return "Nota criada com sucesso!";
             }
             catch (Exception ex)
             {

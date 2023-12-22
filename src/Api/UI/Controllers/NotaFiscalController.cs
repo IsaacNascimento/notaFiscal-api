@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Src.Api.Application.Dto.CarrinhoDto;
+using Src.Api.Application.Dto.NotaFiscalDto;
 using Src.Api.Application.Services.CarrinhoServices;
 using Src.Api.Application.Services.NotaFicalServices;
 using Src.Api.Domain.Models.CarrinhoModels;
@@ -38,13 +39,13 @@ namespace Src.Api.UI.Controllers.NotaFiscalControllers
 
         [HttpPost]
         [Route("v1/notaFiscais")]
-        public IActionResult CriarNotaFiscal([FromBody] CriarCarrinhoDto criarCarrinhoDto)
+        public IActionResult CriarNotaFiscal([FromBody] EmitirNotaFiscalDto emitirNotaFiscalDto)
         {
             try
             {
-                CarrinhoRepository carrinhoRepository = new CarrinhoRepository(_context);
-                CarrinhoService carrinhoService = new CarrinhoService(carrinhoRepository);
-                string message = carrinhoService.CriarCarrinho(criarCarrinhoDto);
+                NotaFiscalRepository notaFiscalRepository = new NotaFiscalRepository(_context);
+                NotaFiscalService notaFiscalService = new NotaFiscalService(notaFiscalRepository);
+                string message = notaFiscalService.EmitirNota(emitirNotaFiscalDto);
 
                 return Ok(new { message });
             }
