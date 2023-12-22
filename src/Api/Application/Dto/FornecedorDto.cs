@@ -4,8 +4,8 @@ namespace Src.Api.Application.Dto.FornecedorDto
 {
     public class CriarFornecedorDto
     {
-        public string? Nome { get; set; } = null;
-        public string? IdNota { get; set; } = null;
-        public List<CriarProdutoDto>? Produtos { get; set; } = null;
+        public required string Cnpj { get; set; }
+        public required string Nome { get; set; }
+        public required string IdNota { get; set; }
     }
 }

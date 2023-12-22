@@ -1,3 +1,4 @@
+using Src.Api.Application.Dto.FornecedorDto;
 using Src.Api.Application.Repository.FornecedorInterface;
 using Src.Api.Domain.Models.FornecedorModels;
 
@@ -15,6 +16,11 @@ namespace Src.Api.Application.Services.FornecedorServices
         {
             List<FornecedorModel> fornecedores = _fornecedorInterface.GetFornecedores();
             return fornecedores;
+        }
+        public string CriarFornecedor(CriarFornecedorDto criarFornecedorDto)
+        {
+            string message = _fornecedorInterface.CriarFornecedor(criarFornecedorDto);
+            return message;
         }
     }
 }

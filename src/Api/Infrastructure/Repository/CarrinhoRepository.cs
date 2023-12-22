@@ -26,14 +26,10 @@ namespace Src.Api.Infrasctructure.Repository.CarrinhoRepositories
                     IdProduto = criarCarrinhoDto.IdProduto,
                 };
 
-                Console.WriteLine("----------------------");
-                Console.WriteLine($"Carrinho DTO: {carrinhoModel}");
-                Console.WriteLine("----------------------");
-
                 _context.Carrinho.Add(carrinhoModel);
                 _context.SaveChanges();
 
-                return "Carrinho criado com sucesso";
+                return "Carrinho criado com sucesso!";
 
             }
             catch (Exception ex)
