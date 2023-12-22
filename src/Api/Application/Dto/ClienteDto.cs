@@ -1,4 +1,3 @@
-using Src.Api.Application.Dto.NotaFiscalDto;
 
 namespace Src.Api.Application.Dto.ClienteDto
 {

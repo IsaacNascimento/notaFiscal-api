@@ -1,11 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using Src.Api.Application.Dto.CarrinhoDto;
 using Src.Api.Application.Dto.NotaFiscalDto;
-using Src.Api.Application.Services.CarrinhoServices;
 using Src.Api.Application.Services.NotaFicalServices;
-using Src.Api.Domain.Models.CarrinhoModels;
 using Src.Api.Domain.Models.NotaFiscalModels;
-using Src.Api.Infrasctructure.Repository.CarrinhoRepositories;
 using Src.Api.Infrasctructure.Repository.NotaFiscalRepositories;
 using Src.Connection;
 

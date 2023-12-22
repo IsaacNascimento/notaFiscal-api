@@ -1,6 +1,3 @@
-using Src.Api.Application.Dto.CarrinhoDto;
-using Src.Api.Application.Dto.FornecedorDto;
-
 namespace Src.Api.Application.Dto.NotaFiscalDto
 {
     public class EmitirNotaFiscalDto

@@ -1,4 +1,3 @@
-using Src.Api.Application.Dto.CarrinhoDto;
 using Src.Api.Application.Dto.ProdutoDto;
 using Src.Api.Application.Repository.ProdutoInterface;
 using Src.Api.Domain.Models.ProdutoModels;
