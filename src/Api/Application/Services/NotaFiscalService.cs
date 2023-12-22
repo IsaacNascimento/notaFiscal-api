@@ -4,10 +4,10 @@ using Src.Api.Domain.Models.NotaFiscalModels;
 
 namespace Src.Api.Application.Services.NotaFicalServices
 {
-    public class NotaFicalService
+    public class NotaFiscalService
     {
         private readonly INotaFiscalInterface _notaFiscalInterface;
-        public NotaFicalService(INotaFiscalInterface notaFiscalInterface)
+        public NotaFiscalService(INotaFiscalInterface notaFiscalInterface)
         {
             _notaFiscalInterface = notaFiscalInterface;
         }
